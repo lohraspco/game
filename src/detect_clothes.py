@@ -179,6 +179,13 @@ def main() -> None:
 
     if not summary.detections:
         print("No clothing items were detected with the current confidence threshold.")
+    else:
+        print("Detections:")
+        for det in summary.detections:
+            print(
+                f"  - {det.label} | confidence={det.confidence:.2%} | "
+                f"box=({det.xmin:.1f}, {det.ymin:.1f}, {det.xmax:.1f}, {det.ymax:.1f})"
+            )
 
     if args.save_csv:
         save_csv(summary, args.save_csv)

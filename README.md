@@ -42,6 +42,16 @@ python src/detect_clothes.py path/to/image.jpg \
     --save-csv outputs/detections.csv
 ```
 
+After the command finishes it prints a short summary similar to:
+
+```
+Annotated image saved to: outputs/annotated.jpg
+Detections:
+  - dress | confidence=87.50% | box=(148.2, 83.6, 412.9, 512.0)
+  - shirt | confidence=74.12% | box=(23.5, 116.0, 201.8, 489.3)
+Detections saved to: outputs/detections.csv
+```
+
 ### Arguments
 
 | Flag | Description |
